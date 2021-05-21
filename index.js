@@ -5,9 +5,11 @@ const jsonParser = express.json();
 const userRouter = require("./routers/user");
 const productRouter = require("./routers/product");
 const categoryRouter = require("./routers/category");
+const orderRouter = require("./routers/order");
 
 app.use(jsonParser);
 
+app.use("/order", orderRouter);
 app.use("/categories", categoryRouter);
 app.use("/products", productRouter);
 app.use("/users", userRouter);

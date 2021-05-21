@@ -19,7 +19,7 @@ router.post("/", async (req, res, next) => {
       res.status(400).send("Must provide correct parameters");
     } else {
       const newUser = await User.create(req.body);
-      res.json(newUser);
+      res.send(newUser);
     }
   } catch (error) {
     next(error);
