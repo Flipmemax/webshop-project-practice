@@ -11,6 +11,8 @@ module.exports = {
         image:
           "https://www.joblo.com/assets/images/joblo/news/2020/08/tenetpostersfinal3.jpg",
         categoryId: 1,
+        createdAt: new Date(),
+        updatedAt: new Date(),
       },
       {
         name: "Mortal Kombat",
@@ -20,6 +22,8 @@ module.exports = {
         image:
           "https://www.joblo.com/assets/images/joblo/posters/2021/03/mortal-kombat-2021-poster-group.jpg",
         categoryId: 1,
+        createdAt: new Date(),
+        updatedAt: new Date(),
       },
       {
         name: "Just Say Yes",
@@ -29,6 +33,8 @@ module.exports = {
         image:
           "https://m.media-amazon.com/images/M/MV5BY2EzYWUxNzYtMjg4Yi00Y2M1LThmZTAtNmYyZTBmMDcxNDhlXkEyXkFqcGdeQXVyNzE2MTQyMzM@._V1_UY1200_CR104,0,630,1200_AL_.jpg",
         categoryId: 2,
+        createdAt: new Date(),
+        updatedAt: new Date(),
       },
       {
         name: "The Best of Me",
@@ -38,6 +44,8 @@ module.exports = {
         image:
           "https://m.media-amazon.com/images/M/MV5BMzQ5Njg3Njk5N15BMl5BanBnXkFtZTgwODIwODIxMjE@._V1_.jpg",
         categoryId: 2,
+        createdAt: new Date(),
+        updatedAt: new Date(),
       },
       {
         name: "BOB LAZAR: Area 51 & Flying Saucers",
@@ -47,6 +55,8 @@ module.exports = {
         image:
           "https://i.pinimg.com/564x/97/3c/57/973c5714196af6cb56a384985cfd7760.jpg",
         categoryId: 3,
+        createdAt: new Date(),
+        updatedAt: new Date(),
       },
       {
         name: "SEASPIRACY",
@@ -56,6 +66,8 @@ module.exports = {
         image:
           "https://m.media-amazon.com/images/M/MV5BZjA0MmZlNTctMzQyNS00MDQyLWFkNGItZDRiMGMxYzg2MDIyXkEyXkFqcGdeQXVyNjEwNTM2Mzc@._V1_.jpg",
         categoryId: 3,
+        createdAt: new Date(),
+        updatedAt: new Date(),
       },
     ]);
     /**
