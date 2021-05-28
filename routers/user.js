@@ -18,7 +18,13 @@ router.post("/", async (req, res, next) => {
     if (!name || !email || !phone || !address || !password) {
       res.status(400).send("Must provide correct parameters");
     } else {
-      const newUser = await User.create(req.body);
+      const newUser = await User.create({
+        name,
+        email,
+        phone,
+        address,
+        password: bcrypt.hashSync(password, 10),
+      });
       res.send(newUser);
     }
   } catch (error) {
