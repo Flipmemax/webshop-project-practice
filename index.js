@@ -6,12 +6,15 @@ const userRouter = require("./routers/user");
 const productRouter = require("./routers/product");
 const categoryRouter = require("./routers/category");
 const orderRouter = require("./routers/order");
+const authRouter = require("./routers/auth");
+const authMiddleware = require("./auth/middleware");
 
 app.use(jsonParser);
 
-app.use("/order", orderRouter);
+app.use("/order", authMiddleware, orderRouter);
 app.use("/categories", categoryRouter);
 app.use("/products", productRouter);
 app.use("/users", userRouter);
+app.use("/login", authRouter);
 
 app.listen(port, () => console.log(`Listening on :${port}`));
