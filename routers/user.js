@@ -1,5 +1,6 @@
 const { Router } = require("express");
 const User = require("../models").user;
+const bcrypt = require("bcrypt");
 
 const router = new Router();
 
@@ -12,7 +13,17 @@ router.get("/", async (req, res, next) => {
   }
 });
 
-router.post("/", async (req, res, next) => {
+// router.get("/me", async (req, res, next) => {
+//   try {
+//     const me = req.params.me;
+//     const user = await User.findByPk({ userId: me });
+//     res.send(user);
+//   } catch (error) {
+//     next(error);
+//   }
+// });
+
+router.post("/new", async (req, res, next) => {
   try {
     const { name, email, phone, address, password } = req.body;
     if (!name || !email || !phone || !address || !password) {
