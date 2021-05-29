@@ -28,12 +28,12 @@ router.post("/:orderId", async (req, res, next) => {
     if (!orderId || !productId || !quantity) {
       res.status(400).json("Missing parameters");
     } else {
-      const newOrderItem = await OrderProduct.create({
+      const newOrderProduct = await OrderProduct.create({
         orderId: orderId,
         productId: productId,
         quantity: quantity,
       });
-      res.json(newOrderItem);
+      res.json(newOrderProduct);
     }
   } catch (e) {
     next(e);
@@ -47,12 +47,12 @@ router.get("/:orderId/products", async (req, res, next) => {
     if (!orderId) {
       res.status(400).json("Missing parameters");
     } else {
-      const OrderItems = await OrderProduct.findAll({
+      const OrderProducts = await OrderProduct.findAll({
         where: { orderId: orderId },
         include: [product],
       });
-      console.log(OrderItems.products[0]);
-      res.json(OrderItems);
+      console.log(OrderProducts.products[0]);
+      res.json(OrderProducts);
     }
   } catch (e) {
     next(e);
